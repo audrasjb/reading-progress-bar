@@ -6,15 +6,15 @@
  * @link       http://jeanbaptisteaudras.com
  * @since      1.0.0
  *
- * @package    reading-progressbar
- * @subpackage reading-progressbar/admin
+ * @package    reading-progress-bar
+ * @subpackage reading-progress-bar/admin
  */
 
 /**
  * The admin-specific functionality of the plugin.
  *
- * @package    reading-progressbar
- * @subpackage reading-progressbar/admin
+ * @package    reading-progress-bar
+ * @subpackage reading-progress-bar/admin
  * @author     audrasjb <audrasjb@gmail.com>
  */
 	// Enqueue styles
@@ -42,8 +42,7 @@ add_action( 'admin_init', 'rp_settings_init' );
 
 function rp_add_admin_menu(  ) { 
 
-	add_options_page( 'Reading progressbar options', 'Reading progressbar', 'manage_options', 'reading-progressbar', 'rp_options_page' );
-
+	add_options_page( __('Reading progressbar options', 'reading-progress-bar'), __('Reading progressbar', 'reading-progress-bar'), 'manage_options', 'reading-progressbar', 'rp_options_page' );
 }
 
 
@@ -53,14 +52,14 @@ function rp_settings_init(  ) {
 
 	add_settings_section(
 		'rp_pluginPage_section', 
-		__( 'Reading progressbar options', 'progressbar' ), 
+		__( 'Reading progressbar options', 'reading-progress-bar' ), 
 		'rp_settings_section_callback', 
 		'pluginPage'
 	);
 
 	add_settings_field( 
 		'rp_field_height', 
-		__( 'Progressbar height (pixels)', 'progressbar' ), 
+		__( 'Progressbar height (pixels)', 'reading-progress-bar' ), 
 		'rp_field_height_render', 
 		'pluginPage', 
 		'rp_pluginPage_section' 
@@ -68,7 +67,7 @@ function rp_settings_init(  ) {
 
 	add_settings_field( 
 		'rp_field_fg_color', 
-		__( 'Foreground color', 'progressbar' ), 
+		__( 'Foreground color', 'reading-progress-bar' ), 
 		'rp_field_fg_color_render', 
 		'pluginPage', 
 		'rp_pluginPage_section' 
@@ -76,7 +75,7 @@ function rp_settings_init(  ) {
 
 	add_settings_field( 
 		'rp_field_bg_color', 
-		__( 'Background color', 'progressbar' ), 
+		__( 'Background color', 'reading-progress-bar' ), 
 		'rp_field_bg_color_render', 
 		'pluginPage', 
 		'rp_pluginPage_section' 
@@ -84,7 +83,7 @@ function rp_settings_init(  ) {
 
 	add_settings_field( 
 		'rp_field_position', 
-		__( 'Progressbar position', 'progressbar' ), 
+		__( 'Progressbar position', 'reading-progress-bar' ), 
 		'rp_field_position_render', 
 		'pluginPage', 
 		'rp_pluginPage_section' 
@@ -92,7 +91,7 @@ function rp_settings_init(  ) {
 
 	add_settings_field( 
 		'rp_field_custom_position', 
-		__( 'Target fixed HTML element class/id to stick the bar on it’s bottom', 'progressbar' ), 
+		__( 'Target fixed HTML element class/id to stick the bar on it’s bottom', 'reading-progress-bar' ), 
 		'rp_field_custom_position_render', 
 		'pluginPage', 
 		'rp_pluginPage_section' 
@@ -100,7 +99,7 @@ function rp_settings_init(  ) {
 
 	add_settings_field( 
 		'rp_field_templates', 
-		__( 'Select templates to apply progressbar', 'progressbar' ), 
+		__( 'Select templates to apply progressbar', 'reading-progress-bar' ), 
 		'rp_field_templates_render', 
 		'pluginPage', 
 		'rp_pluginPage_section' 
@@ -108,7 +107,7 @@ function rp_settings_init(  ) {
 
 	add_settings_field( 
 		'rp_field_posttypes', 
-		__( 'Select post types to apply progressbar', 'progressbar' ), 
+		__( 'Select post types to apply progressbar', 'reading-progress-bar' ), 
 		'rp_field_posttypes_render', 
 		'pluginPage', 
 		'rp_pluginPage_section' 
@@ -116,7 +115,7 @@ function rp_settings_init(  ) {
 
 /*	add_settings_field( 
 		'rp_field_mobile', 
-		__( 'Display progressbar on mobile devices?', 'progressbar' ), 
+		__( 'Display progressbar on mobile devices?', 'reading-progress-bar' ), 
 		'rp_field_mobile_render', 
 		'pluginPage', 
 		'rp_pluginPage_section' 
@@ -171,11 +170,11 @@ function rp_field_position_render(  ) {
 	}
 	?>
 	<select name='rp_settings[rp_field_position]'>
-		<option value='top' <?php selected( $optionPosition, 'top' ); ?>><?php echo __('Top', 'progressbar'); ?></option>
-		<option value='bottom' <?php selected( $optionPosition, 'bottom' ); ?>><?php echo __('Bottom', 'progressbar'); ?></option>
-		<option value='custom' <?php selected( $optionPosition, 'custom' ); ?>><?php echo __('Custom', 'progressbar'); ?></option>
+		<option value='top' <?php selected( $optionPosition, 'top' ); ?>><?php echo __('Top', 'reading-progress-bar'); ?></option>
+		<option value='bottom' <?php selected( $optionPosition, 'bottom' ); ?>><?php echo __('Bottom', 'reading-progress-bar'); ?></option>
+		<option value='custom' <?php selected( $optionPosition, 'custom' ); ?>><?php echo __('Custom', 'reading-progress-bar'); ?></option>
 	</select>
-	<p class="description"><?php echo __('Note: custom position is not ok with all WordPress themes. It needs a fixed element to stick the progressbar on it. <br />You may need some custom CSS to put the progressbar on the right place as it uses absolute positionning.', 'progressbar'); ?></p>
+	<p class="description"><?php echo __('Note: custom position is not ok with all WordPress themes. It needs a fixed element to stick the progressbar on it. <br />You may need some custom CSS to put the progressbar on the right place as it uses absolute positionning.', 'reading-progress-bar'); ?></p>
 <?php
 }
 
@@ -188,7 +187,7 @@ function rp_field_custom_position_render(  ) {
 	}
 	?>
 	<input type='text' name='rp_settings[rp_field_custom_position]' value='<?php echo $optionCustomPosition; ?>'>
-	<p class="description"><?php echo __('Note: use it only if you have selected <b>custom</b> position before, instead of <b>top</b> or <b>bottom</b>', 'progressbar'); ?></p>
+	<p class="description"><?php echo __('Note: use it only if you have selected <b>custom</b> position before, instead of <b>top</b> or <b>bottom</b>', 'reading-progress-bar'); ?></p>
 	<?php
 }
 
@@ -208,14 +207,14 @@ function rp_field_templates_render( ) {
 		$optionTemplatesSingle = '';
 	}
 	?>
-	<p><input type='checkbox' name='rp_settings[rp_field_templates][home]' <?php checked( $optionTemplatesHome == '1' ); ?> value='1' /> <?php echo __('Front-page', 'progressbar' ); ?></p>
-	<p class="description"><?php echo __('(as set in Settings &gt; Reading)', 'progressbar'); ?></p>
-	<p><input type='checkbox' name='rp_settings[rp_field_templates][blog]' <?php checked( $optionTemplatesBlog == '1' ); ?> value='1' /> <?php echo __('Blog page', 'progressbar' ); ?></p>
-	<p class="description"><?php echo __('(as set in Settings &gt; Reading)', 'progressbar'); ?></p>
-	<p><input type='checkbox' name='rp_settings[rp_field_templates][archive]' <?php checked( $optionTemplatesArchive == '1' ); ?> value='1' /> <?php echo __('Archives and categories / taxonomies for posts or custom post types', 'progressbar' ); ?></p>
-	<p class="description"><?php echo __('(you need to include concerned post types below)', 'progressbar' ); ?>
-	<p><input type='checkbox' name='rp_settings[rp_field_templates][single]' <?php checked( $optionTemplatesSingle == '1' ); ?> value='1' /> <?php echo __('Single post / page / custom post type', 'progressbar'); ?></p>
-	<p class="description"><?php echo __('(you need to include concerned post types below)', 'progressbar' ); ?>
+	<p><input type='checkbox' name='rp_settings[rp_field_templates][home]' <?php checked( $optionTemplatesHome == '1' ); ?> value='1' /> <?php echo __('Front-page', 'reading-progress-bar' ); ?></p>
+	<p class="description"><?php echo __('(as set in Settings &gt; Reading)', 'reading-progress-bar'); ?></p>
+	<p><input type='checkbox' name='rp_settings[rp_field_templates][blog]' <?php checked( $optionTemplatesBlog == '1' ); ?> value='1' /> <?php echo __('Blog page', 'reading-progress-bar' ); ?></p>
+	<p class="description"><?php echo __('(as set in Settings &gt; Reading)', 'reading-progress-bar'); ?></p>
+	<p><input type='checkbox' name='rp_settings[rp_field_templates][archive]' <?php checked( $optionTemplatesArchive == '1' ); ?> value='1' /> <?php echo __('Archives and categories / taxonomies for posts or custom post types', 'reading-progress-bar' ); ?></p>
+	<p class="description"><?php echo __('(you need to include concerned post types below)', 'reading-progress-bar' ); ?>
+	<p><input type='checkbox' name='rp_settings[rp_field_templates][single]' <?php checked( $optionTemplatesSingle == '1' ); ?> value='1' /> <?php echo __('Single post / page / custom post type', 'reading-progress-bar'); ?></p>
+	<p class="description"><?php echo __('(you need to include concerned post types below)', 'reading-progress-bar' ); ?>
 	<?php
 }
 
@@ -259,7 +258,7 @@ function rp_field_mobile_render(  ) {
 
 function rp_settings_section_callback(  ) { 
 
-	echo __( 'Check out the plugin options below.', 'progressbar' );
+	echo __( 'Check out the plugin options below.', 'reading-progress-bar' );
 
 }
 

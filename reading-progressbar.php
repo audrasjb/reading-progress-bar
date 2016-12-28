@@ -26,7 +26,7 @@ if ( ! defined( 'WPINC' ) ) {
 /**
  * i18n
  */
-//require_once plugin_dir_path( dirname( __FILE__ ) ) . '/' .$plugin_name . '/includes/rp-i18n.php';
+load_plugin_textdomain( 'reading-progress-bar', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' ); 
 
 /**
  * Admin

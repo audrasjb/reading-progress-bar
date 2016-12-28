@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Reading progressbar\n"
-"POT-Creation-Date: 2016-12-26 18:29+0100\n"
-"PO-Revision-Date: 2016-12-26 18:42+0100\n"
+"Project-Id-Version: Reading Progress Bar\n"
+"POT-Creation-Date: 2016-12-28 15:07+0100\n"
+"PO-Revision-Date: 2016-12-28 15:11+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -15,8 +15,8 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
@@ -34,7 +34,7 @@ msgstr "Couleur de premier plan"
 
 #: admin/rp-admin.php:79
 msgid "Background color"
-msgstr "Couleur d’arrière plan"
+msgstr "Couleur d’arrière-plan"
 
 #: admin/rp-admin.php:87
 msgid "Progressbar position"
@@ -58,6 +58,18 @@ msgstr ""
 "Sélectionner des types de contenus sur lesquels appliquer la barre de "
 "progression"
 
+#: admin/rp-admin.php:174
+msgid "Top"
+msgstr "Haut"
+
+#: admin/rp-admin.php:175
+msgid "Bottom"
+msgstr "Bas"
+
+#: admin/rp-admin.php:176
+msgid "Custom"
+msgstr "Personnalisé"
+
 #: admin/rp-admin.php:178
 msgid ""
 "Note: custom position is not ok with all WordPress themes. It needs a fixed "
@@ -66,9 +78,9 @@ msgid ""
 msgstr ""
 "À noter : le positionnement personnalisé ne fonctionne pas avec tous les "
 "thèmes WordPress. Cela nécessite un élément fixe sur lequel coller la barre "
-"de progression. <br />Vous pourrez avoir besoin d’un peu de CSS "
-"personnalisé pour mettre la barre au bon endroit car cette fonctionnalité "
-"utilise un positionnement absolu par rapport à l’élément parent."
+"de progression. <br />Vous pourrez avoir besoin d’un peu de CSS personnalisé "
+"pour mettre la barre au bon endroit car cette fonctionnalité utilise un "
+"positionnement absolu par rapport à l’élément parent."
 
 #: admin/rp-admin.php:191
 msgid ""
@@ -93,12 +105,12 @@ msgstr "Page du blog"
 #: admin/rp-admin.php:215
 msgid "Archives and categories / taxonomies for posts or custom post types"
 msgstr ""
-"Pages d’archives, de catégories, de taxonomies pour les articles et types "
-"de contenus personnalisés"
+"Pages d’archives, de catégories, de taxonomies pour les articles et types de "
+"contenus personnalisés"
 
 #: admin/rp-admin.php:216 admin/rp-admin.php:218
 msgid "(you need to include concerned post types below)"
-msgstr "(Vous devez inclure les types de contenus concernés ci-après)"
+msgstr "(vous devez inclure les types de contenus concernés ci-après)"
 
 #: admin/rp-admin.php:217
 msgid "Single post / page / custom post type"
@@ -109,30 +121,28 @@ msgid "Check out the plugin options below."
 msgstr "Paramétrez les options de l’extension ici."
 
 #. Plugin Name of the plugin/theme
-msgid "Reading progressbar"
-msgstr "Reading progressbar"
+msgid "Reading Progress Bar"
+msgstr "Reading Progress Bar"
 
 #. Plugin URI of the plugin/theme
 msgid ""
 "http://jeanbaptisteaudras.com/portfolio/wordpress-reading-progressbar-"
 "indicator-plugin/"
 msgstr ""
-"http://jeanbaptisteaudras.com/portfolio/wordpress-reading-progressbar-"
-"indicator-plugin/"
 
 #. Description of the plugin/theme
 msgid ""
-"Get a reading position indicator as a progress bar and show it where you "
-"want: top, bottom or custom position in differents templates or post types."
+"A reading position indicator that you can use where you want: top, bottom or "
+"custom position in differents templates or post types."
 msgstr ""
-"Obtenez un indicateur de position de lecture sous la forme d’une barre de "
-"progression et affichez-la où vous voulez : haut, bas, position "
-"personnalisée sur différents modèles de pages et types de contenus."
+"Un indicateur de position de lecture sous la forme d’une barre de "
+"progression à afficher où vous voulez : haut, bas ou position personnalisée, "
+"sur différents modèles de pages et types de contenus."
 
 #. Author of the plugin/theme
 msgid "Jean-Baptiste Audras, project manager @ Whodunit"
-msgstr "Jean-Baptiste Audras, chef de projet WordPress chez Whodunit"
+msgstr "Jean-Baptiste Audras, chef de projet technique chez Whodunit"
 
 #. Author URI of the plugin/theme
 msgid "http://jeanbaptisteaudras.com"
-msgstr "http://jeanbaptisteaudras.com"
+msgstr ""

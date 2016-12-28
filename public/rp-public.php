@@ -6,15 +6,15 @@
  * @link       http://jeanbaptisteaudras.com
  * @since      1.0.0
  *
- * @package    reading-progressbar
- * @subpackage reading-progressbar/public
+ * @package    reading-progress-bar
+ * @subpackage reading-progress-bar/public
  */
 
 /**
  * The public-specific functionality of the plugin.
  *
- * @package    reading-progressbar
- * @subpackage reading-progressbar/admin
+ * @package    reading-progress-bar
+ * @subpackage reading-progress-bar/admin
  * @author     audrasjb <audrasjb@gmail.com>
  */
  	add_action( 'wp_enqueue_scripts', 'enqueue_styles_reading_progressbar_public' );
