@@ -19,7 +19,6 @@
 
 		// Custom position
 		if (progressPosition == 'custom') {
-			console.log(progressCustomPosition);
 			$('.readingProgressbar').appendTo(progressCustomPosition);
 			progressPosition = 'bottom';
 			progressFixedOrAbsolute = 'absolute';
