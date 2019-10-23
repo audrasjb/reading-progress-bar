@@ -1,16 +1,16 @@
 <?php
 
 /**
- * @link              http://jeanbaptisteaudras.com/portfolio/wordpress-reading-progressbar-indicator-plugin/
- * @since             1.1
+ * @link              https://jeanbaptisteaudras.com/portfolio/wordpress-reading-progressbar-indicator-plugin/
+ * @since             1.0
  * @package           Reading Progress Bar
  *
  * @wordpress-plugin
  * Plugin Name:       Reading Progress Bar
- * Plugin URI:        http://jeanbaptisteaudras.com/portfolio/wordpress-reading-progressbar-indicator-plugin/
+ * Plugin URI:        https://jeanbaptisteaudras.com/portfolio/wordpress-reading-progressbar-indicator-plugin/
  * Description:       A reading position indicator that you can use where you want: top, bottom or custom position in differents templates or post types.
- * Version:           1.1
- * Author:            Jean-Baptiste Audras, project manager @ Whodunit
+ * Version:           1.2.1
+ * Author:            Jb Audras, CTO @ Whodunit
  * Author URI:        http://jeanbaptisteaudras.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt

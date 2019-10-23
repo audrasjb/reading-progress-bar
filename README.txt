@@ -1,9 +1,11 @@
 === Reading progressbar ===
 Contributors: audrasjb,whodunitagency
+Donate link: https://www.paypal.me/audrasjb
 Tags: reading, progressbar, progress, scroll, read, bar, position, indicator, template, lecture, barre, suivi
 Requires at least: 4.5
-Tested up to: 4.7
-Stable tag: 1.1
+Tested up to: 5.3
+Requires PHP: 5.6
+Stable tag: 1.2.1
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -13,16 +15,33 @@ A reading position indicator that you can use where you want: top, bottom or cus
 
 Get a reading position indicator as a progress bar and show it where you want: top, bottom or custom position in differents templates or post types.
 
-**Credits** 
-[Jean-Baptiste Audras](http://jeanbaptisteaudras.com/ "Jean-Baptiste Audras"), project manager at [Whodunit](http://www.whodunit.fr/ "Whodunit WordPress Agency") and WordPress developer. @audrasjb on [Twitter](https://twitter.com/audrasjb "@audrasjb on Twitter") or [Github](https://github.com/audrasjb "@audrasjb on Github").
+Very lightweight, it uses `<progress>` HTML5 element and few lines of javascript.
 
-**Contribute** 
-Add your own language pack or do pull requests on [Github](https://github.com/audrasjb "Plugin repo on Github"). Contributors will be credited.
+Options: 
+
+*   Progress bar’s height
+*   Foreground color
+*   Background color
+*   Position (top, bottom, custom)
+*   Class/ID of HTML element to fix the bar (if custom position selected)
+*   Page templates
+*   Post types (natives or custom)
+
+**Credits** : 
+
+*   [Jean-Baptiste Audras](http://jeanbaptisteaudras.com/ "Jean-Baptiste Audras"), project manager at [Whodunit](http://www.whodunit.fr/ "Whodunit WordPress Agency") and WordPress developer. @audrasjb on [Twitter](https://twitter.com/audrasjb "@audrasjb on Twitter") or [Github](https://github.com/audrasjb "@audrasjb on Github").
 
 == Installation ==
 
 1. Install the plugin and activate.
 2. Go to Settings &gt; Reading Progressbar to manage plugin’s options.
+
+== Frequently Asked Questions ==
+
+= Does it works on WordPress network/multisite? =
+
+Sorry but this plugin doesn’t supports network/multisite installation in it's free/public version. 
+It will be fixed on version 2.0. Contact me if you want to help or ask for more informations.
 
 == Screenshots ==
 
@@ -31,8 +50,14 @@ Add your own language pack or do pull requests on [Github](https://github.com/au
 
 == Changelog ==
 
-= 1.0 =
-* Plugin internationalization.
+= 1.2.1 = 
+* Gutenberg and WordPress 5.0/5.1 compatibility. Works fine.
+
+= 1.2 =
+* Add german translation and fixed a JS bug while loading the progressbar value. We need to load the whole page before display the bar :)
+
+= 1.1 =
+* i18n ready.
 
 = 1.0 =
 * Plugin initial commit. Works fine :)

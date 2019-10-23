@@ -1,10 +1,10 @@
 (function( $ ) {
 	'use strict';
 	
-	// Il faut que le DOM soit déjà opé
-	$(function() { 
+	// The DOM needs to be fully loaded (including graphics, iframes, etc)
+	$(window).load(function() {
 
-		// Calcul de la valeur max de la progressbar
+		// Maximum value for the progressbar
 		var winHeight = $(window).height(),
 		docHeight = $(document).height();
 		var max = docHeight - winHeight;
@@ -19,6 +19,7 @@
 
 		// Custom position
 		if (progressPosition == 'custom') {
+			console.log(progressCustomPosition);
 			$('.readingProgressbar').appendTo(progressCustomPosition);
 			progressPosition = 'bottom';
 			progressFixedOrAbsolute = 'absolute';
@@ -39,20 +40,21 @@
 			'height' :  progressHeight + 'px',
 			'top' : progressTop,
 			'bottom' : progressBottom,
-			'position' : progressFixedOrAbsolute
+			'position' : progressFixedOrAbsolute,
+			'display' : 'block'
 		});
 
 		$('<style>.readingProgressbar::-webkit-progress-bar { background-color: transparent } .readingProgressbar::-webkit-progress-value { background-color: ' + progressForeground + ' } .readingProgressbar::-moz-progress-bar { background-color: ' + progressForeground + ' }</style>')
 		.appendTo('head');
 
-		// Valeur initiale (si on arrive via une ancre ou autre…)
+		// Inital value (if the page is loaded within an anchor)
 		var value = $(window).scrollTop();
 		$('.readingProgressbar').attr('value', value);
-		// Calcul et maj dynamique de la valeur lors du scroll
+		// Maths & live update of progressbar value
 		$(document).on('scroll', function() {
 			value = $(window).scrollTop();
 			$('.readingProgressbar').attr('value', value);
 		});
 	});
-
+	
 })( jQuery );
