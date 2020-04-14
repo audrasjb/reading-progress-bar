@@ -55,6 +55,16 @@
 			value = $(window).scrollTop();
 			$('.readingProgressbar').attr('value', value);
 		});
+		// recalculer max lorsque la fenêtre est redimensionnée
+		$(window).on('resize', function(){
+			winHeight = $(window).height();
+			docHeight = $(document).height();
+			max = docHeight - winHeight;
+			$('.readingProgressbar').attr('max', max);
+
+			value =  $(window).scrollTop();
+			$('.readingProgressbar').attr('value', value);
+		});
 	});
 	
 })( jQuery );
